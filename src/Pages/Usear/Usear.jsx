@@ -1,12 +1,13 @@
 import React from 'react';
-import User from '../../Components/Usear/Usear'
-import LayOut from './../../Layout/index';
+import LayOut from '../../Layout';
+import Usears from '../../Components/Usear/Usear'
 const Usear = () => {
     return (
         <div>
-              <LayOut>
-                <User/>
+            <LayOut>
+                <Usears/>
             </LayOut>
+            
         </div>
     );
 };

@@ -9,6 +9,8 @@ import Sales from "./Pages/Sales/Sales";
 import Product from "./Pages/Products/Product";
 import Massages from "./Pages/Massages/Massages";
 import Manage from "./Pages/Manage/Manage";
+import OrderList from "./Pages/OrderList/OrderList"
+import Profile from "./Pages/Profile/Profile";
 
 
 
@@ -22,18 +24,20 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/addProduct" element={<AddPorduct/>}/>
         <Route path="/sales" element={<Sales/>}/>
-
-        {/* Quick Menu */}
         <Route path="/user" element={<Usear/>}/>        
         <Route path="/products" element={<Product/>}/>
+        {/* Quick Menu */}
+        
 
-        {/* Notifications */}
-       
+        {/* Notifications */}  
         <Route path="/feedback" element={<FeedBack/>}/>
         <Route path="/messages" element={<Massages/>}/>
+        
        
         {/* Staf */}
-        <Route path="/manage" element={<Manage/>}/>
+        <Route path="/orderList" element={<OrderList/>}/>
+        <Route path="/settings/profile" element={<Profile/>}/>
+       
 
       </Routes>
   

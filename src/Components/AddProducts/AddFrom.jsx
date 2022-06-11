@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import './AddFrom.css';
+import { useEffect } from 'react';
+const axios = require('axios').default;
 
 const AddFrom = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+console.log(data)
 
-    console.log(watch("example"));
+        fetch('http://localhost:400/users',{
+            mathod:'post',
+            headers:{
+                'content-type':'application/json', 
+            },
+            body:JSON.stringify(data)
+        })
+        .then()
+        // .then((res) => res.json())
+        // .then((data) =>setUsers(data));
+        console.log(data)
+        data.preventDefault();
+    }
+    const [users, setUsers]=useState([]);
+
+useEffect(()=>{
+    fetch('http://localhost:400/users')
+        .then((response) => response.json())
+        .then((data) =>setUsers(data));
+    
+},[])
     return (
         <div className='addProduct-from w-90'>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -55,6 +78,8 @@ const AddFrom = () => {
                         <div className="">
                             <textarea className="addInputfrom addDetailsfrom" placeholder="product Details" type="text" productDetails="productDetails" {...register("productDetails", { required: true })} /><br />
                             <input type="submit" className="submit" />
+                            {/* <h1>{users.length}</h1>
+                            <h1>{users.length}</h1> */}
                         </div>
                     </div>
                 </div>

@@ -57,13 +57,13 @@ const routes = [
         },
       ],
   },
+  // {
+  //   path: "/analytics",
+  //   name: "Analytics",
+  //   icon: <BiAnalyse />,
+  // },
   {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BiAnalyse />,
-  },
-  {
-    path: "/order",
+    path: "/orderList",
     name: "Order",
     icon: <BsCartCheck />,
   },
@@ -78,18 +78,18 @@ const routes = [
         name: "Profile ",
         icon: <FaUser />,
       },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
-      },
+      // {
+      //   path: "/settings/billing",
+      //   name: "Billing",
+      //   icon: <FaMoneyBill />,
+      // },
     ],
   },
-  {
-    path: "/saved",
-    name: "Saved",
-    icon: <AiFillHeart />,
-  },
+  // {
+  //   path: "/saved",
+  //   name: "Saved",
+  //   icon: <AiFillHeart />,
+  // },
 ];
 
 const SideBar = ({ children }) => {

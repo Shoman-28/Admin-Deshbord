@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/addProduct" element={<AddPorduct/>}/>
         <Route path="/sales" element={<Sales/>}/>
-        <Route path="/user" element={<Usear/>}/>        
+        <Route path="/user " element={<Usear/>}/>        
         <Route path="/products" element={<Product/>}/>
         {/* Quick Menu */}
         

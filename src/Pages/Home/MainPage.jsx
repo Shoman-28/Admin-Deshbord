@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from'../../Components/Home/index'
+import Home from'../../Components/Home/Home'
 import AddPorduct from '../AddPorduct/AddPorduct';
 import SideBar from '../SideBar/SideBar';
 
